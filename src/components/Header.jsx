@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [user, setUser] = useState(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // ✅ Services Data
   const services = {
@@ -31,16 +31,16 @@ const Header = () => {
     if (storedUser) setUser(JSON.parse(storedUser));
   }, []);
 
-  // ✅ Logout function
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    setUser(null);
-    toast.success("Logged out successfully 👋");
-    setIsAccountOpen(false);
-    setIsOpen(false);
-    navigate("/");
-  };
+  // // ✅ Logout function
+  // const handleLogout = () => {
+  //   localStorage.removeItem("user");
+  //   localStorage.removeItem("token");
+  //   setUser(null);
+  //   toast.success("Logged out successfully 👋");
+  //   setIsAccountOpen(false);
+  //   setIsOpen(false);
+  //   navigate("/");
+  // };
 
   // ✅ Close dropdowns when clicking outside
   useEffect(() => {

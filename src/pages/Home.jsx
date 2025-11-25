@@ -1,5 +1,5 @@
 import AboutSection from '../components/AboutSection'
-import Banner from '../components/banner'
+import Banner from '../components/Banner'
 import ContactForm from '../components/ContactForm'
 // import Testimonial from '../components/testimonial'
 
